@@ -17,7 +17,7 @@ export function useAppleAuth(clientId: string) {
         window.AppleID.auth.init({
           clientId,
           scope: "name email",
-          redirectURI: "https://eye-scan.synapsismedical.com/api/auth/apple/callback",
+          redirectURI: window.location.origin,
           usePopup: true,
         });
       } catch (err) {
