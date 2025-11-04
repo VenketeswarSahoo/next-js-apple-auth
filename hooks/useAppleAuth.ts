@@ -18,7 +18,7 @@ export function useAppleAuth(clientId: string) {
           clientId,
           scope: "name email",
           redirectURI: "https://eye-scan.synapsismedical.com/en/api/auth/apple/callback",
-          usePopup: false,
+          usePopup: true,
         });
       } catch (err) {
         console.warn("Apple SDK not initialized (developer access required).", err);
